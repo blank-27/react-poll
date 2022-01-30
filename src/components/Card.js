@@ -48,7 +48,7 @@ const Card = ({dish}) => {
             dish.TotalPoints+=30;
         }
         https://raw.githubusercontent.com/blank-27/react-poll/main/db.json
-        axios.put(`http://localhost:5001/dishes/${id}`,{...dish});
+        axios.put(`https://react-poll-blank.herokuapp.com/dishes/${id}`,{...dish});
         voted();
     }
 
@@ -70,7 +70,7 @@ const Card = ({dish}) => {
             localStorage.setItem('first',null);
             dish.TotalPoints-=30;
         }
-        axios.put(`http://localhost:5001/dishes/${id}`,{...dish});
+        axios.put(`https://react-poll-blank.herokuapp.com/dishes/${id}`,{...dish});
         voted();
     }
 

@@ -13,7 +13,7 @@ const Poll = () => {
     const [dishes,setDishes] = useState([]);
 
     const fetchDishes = async () =>{
-        const data = await fetch('http://localhost:5001/dishes');
+        const data = await fetch('https://react-poll-blank.herokuapp.com/dishes');
         const dishes = await data.json();
         setDishes(dishes);
     };
