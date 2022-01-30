@@ -47,20 +47,7 @@ const Card = ({dish}) => {
             localStorage.setItem('first',id);
             dish.TotalPoints+=30;
         }
-
-        // if(!dish.users){
-        //     dish.users=[];
-        // }
-        // if(dish.users.includes(userid)){
-        //     //removing id
-        //     dish.users = dish.users.filter((id)=>{
-        //         return id!==userid;
-        //     }); 
-        //     setvoted(false);
-        // }else{
-            // dish.users.push(userid);
-        
-        // }
+        https://raw.githubusercontent.com/blank-27/react-poll/main/db.json
         axios.put(`http://localhost:5001/dishes/${id}`,{...dish});
         voted();
     }
