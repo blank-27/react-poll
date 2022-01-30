@@ -10,13 +10,11 @@ const Result = () => {
     const [dishes,setDishes] = useState([]);
 
     const fetchDishes = async () =>{
-        const data = await fetch('http://localhost:5001/dishes?_sort=users&_order=desc');
+        const data = await fetch('http://localhost:5001/dishes?_sort=TotalPoints&_order=desc');
         const dishes = await data.json();
         setDishes(dishes);
     };
-    dishes.sort(function(a, b) {
-        return !(a.users.length - b.users.length);
-    });
+    
 
     return (
         <div className="flex flex-wrap justify-center md:container md:mx-auto p-4 ">
